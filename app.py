@@ -14,10 +14,6 @@ def getWind(location):
     wind = {'location': location, 'wind_speed': windSpeed, 'wind_direction': windDir}
     return wind
 
-@app.route("/")
-def index():
-    return "Hello World!"
-
 @app.route("/temp/<location>")
 def temp(location):
     if location == '':

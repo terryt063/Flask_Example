@@ -1,7 +1,1 @@
-itsdangerous
-click
-Jinja2
-Werkzeug
-colorama
-MarkupSafe
 flask
