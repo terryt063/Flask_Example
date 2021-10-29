@@ -1,7 +1,7 @@
 from flask import Flask
 import random
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 def getTemp(location):
     # get a random temperature for the location
@@ -14,14 +14,14 @@ def getWind(location):
     wind = {'location': location, 'wind_speed': windSpeed, 'wind_direction': windDir}
     return wind
 
-@app.route("/temp/<location>")
+@application.route("/temp/<location>")
 def temp(location):
     if location == '':
         return 'No location entered'
     else:
         return getTemp(location)
 
-@app.route("/wind/<location>")
+@application.route("/wind/<location>")
 def wind(location):
     if location == '':
         return 'No location entered'
